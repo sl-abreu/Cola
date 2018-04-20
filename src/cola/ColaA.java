@@ -37,10 +37,10 @@ public class ColaA<T> implements ColaADT<T> {
     }
     @Override
     public void push(T dato){
-        if(inicio==-1)
-            inicio=0;
         if((fin+1)%cola.length==inicio)
             expandCapacity();
+        if(inicio==-1)
+            inicio=0;
         fin=(fin+1)%cola.length;
         cola[fin]=dato;
     }
